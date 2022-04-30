@@ -1,14 +1,14 @@
 //
-//  ObservedScreen.swift
+//  EnvironmentView1.swift
 //  PracticeProperty
 //
-//  Created by 西澤駿 on 2022/04/29.
+//  Created by 西澤駿 on 2022/04/30.
 //
 
 import SwiftUI
 
-struct ObservedScreen: View {
-    @ObservedObject var userInfo = UserInfo()
+struct EnvironmentView1: View {
+    @EnvironmentObject var userInfo: UserInfo
 
     var body: some View {
         VStack {
@@ -21,8 +21,12 @@ struct ObservedScreen: View {
             Button(action: { userInfo.age += 1}) {
                 Text("年齢アップ")
             }
-
-            ObservedScreen2(userInfo: userInfo)
         }
+    }
+}
+
+struct EnvironmentView1_Previews: PreviewProvider {
+    static var previews: some View {
+        EnvironmentView1()
     }
 }

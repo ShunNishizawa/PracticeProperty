@@ -8,7 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
+@State var isShowingView = false
+
     var body: some View {
+//        NavigationView{
+//            VStack{
+//                EnvironmentView1()
+//                EnvironmentView2()
+//                Button(action: { isShowingView.toggle() }) {
+//                    Text("ObservedObject画面へ")
+//                }
+//            }
+//
+//
+//        }
+//        NavigationLink( destination: ObservedScreen(), isActive: $isShowingView) {
+//            EmptyView()
+//        }
+
         ObservedScreen()
     }
 }
